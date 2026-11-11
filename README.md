@@ -5,6 +5,14 @@
 </div>
 
 
+<!-- BEGIN PODCAST -->
+<div align="center">
+
+[🎙️ **Podcast**](podcast/README.md)
+
+</div>
+<!-- END PODCAST -->
+
 <!-- BEGIN EXPERTISE | native GitHub one-page SiFa accordions -->
 <div align="center">
 <img src="assets/expertise/expertise-banner.svg" width="100%" alt="Vuki73 Terminal · Fachkompetenzen" />
