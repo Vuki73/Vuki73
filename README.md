@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/terminal-profile-v5.svg" width="100%" alt="Vuki73 terminal style profile" />
+<img src="assets/terminal-profile-v6.svg" width="100%" alt="Vuki73 terminal style profile" />
 
 </div>
 
