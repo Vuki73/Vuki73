@@ -12,7 +12,7 @@
 <img src="assets/expertise/sifa-overview.svg" width="100%" alt="SiFa · Fachkraft für Arbeitssicherheit · 10+ Jahre Erfahrung" />
 </div>
 
-<!-- Alle sechs Unterbereiche bleiben direkt auf dieser Profilseite. Keine Links auf HTML-Seiten. -->
+<!-- Alle fünf SiFa-Unterbereiche bleiben direkt auf dieser Profilseite. Keine Links auf HTML-Seiten. -->
 
 <details>
 <summary><strong>01 · Beratung &amp; Arbeitsschutzorganisation</strong> · Führungskräfte, Pflichten und betriebliche Strukturen</summary>
@@ -49,11 +49,5 @@
 
 </details>
 
-<details>
-<summary><strong>06 · Arbeitsschutzmanagement &amp; ISO 45001</strong> · Managementsystem, interne Audits und Verbesserung</summary>
-
-<img src="assets/expertise/sifa-content-06.svg" width="100%" alt="06 · Arbeitsschutzmanagement &amp; ISO 45001 – Fachinhalte" />
-
-</details>
 
 <!-- END EXPERTISE -->
