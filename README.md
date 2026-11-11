@@ -99,4 +99,46 @@
 
 <!-- END SIGEKO -->
 
+<!-- BEGIN BRANDSCHUTZ | native GitHub one-page accordions; FROZEN sections unchanged -->
+<div align="center">
+<img src="assets/expertise/brandschutz-overview.svg" width="100%" alt="Brandschutzbeauftragter · Betrieblicher und organisatorischer Brandschutz · Kenntnisse im baulichen Brandschutz" />
+</div>
+
+<details>
+<summary><strong>01 · Brandschutzorganisation &amp; Koordination</strong> · Organisation und betriebliche Verantwortung</summary>
+
+<img src="assets/expertise/brandschutz-content-01.svg" width="100%" alt="01 · Brandschutzorganisation &amp; Koordination – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>02 · Brandschutzbegehungen &amp; Mängelmanagement</strong> · Prävention, Kontrolle und Nachverfolgung</summary>
+
+<img src="assets/expertise/brandschutz-content-02.svg" width="100%" alt="02 · Brandschutzbegehungen &amp; Mängelmanagement – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>03 · Vorbeugender Brandschutz im Industriebetrieb</strong> · Brandgefährdungen und feuergefährliche Arbeiten</summary>
+
+<img src="assets/expertise/brandschutz-content-03.svg" width="100%" alt="03 · Vorbeugender Brandschutz im Industriebetrieb – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>04 · Brandschutzordnung &amp; Notfallorganisation</strong> · Alarmierung, Räumung und Notfallmaßnahmen</summary>
+
+<img src="assets/expertise/brandschutz-content-04.svg" width="100%" alt="04 · Brandschutzordnung &amp; Notfallorganisation – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>05 · Brandschutzunterweisungen, Brandschutzhelferausbildung &amp; Schulungsmedien</strong> · Gefährdungsspezifische Ausbildung, Videos und Lernmedien</summary>
+
+<img src="assets/expertise/brandschutz-content-05.svg" width="100%" alt="05 · Brandschutzunterweisungen, Brandschutzhelferausbildung &amp; Schulungsmedien – Fachinhalte" />
+
+</details>
+
+<!-- END BRANDSCHUTZ -->
+
 <!-- END EXPERTISE -->
