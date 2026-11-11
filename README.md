@@ -8,7 +8,7 @@
 <!-- BEGIN PODCAST -->
 <div align="center">
 
-[🎙️ **Podcast**](https://vuki73.github.io/Vuki73/podcast/)
+[🎙️ **Podcast**](podcast/README.md)
 
 </div>
 <!-- END PODCAST -->
