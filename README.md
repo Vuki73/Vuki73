@@ -220,7 +220,7 @@
 
 <!-- BEGIN SOFTWARE_ENGINEERING_AI | native GitHub single-page accordions; earlier sections FROZEN -->
 <div align="center">
-<img src="assets/expertise/software-overview.svg" width="100%" alt="Software Engineering &amp; AI · Python, Web, Android, Kotlin, KI-Agenten und Industrial Software" />
+<img src="assets/expertise/software-overview-v2.svg" width="100%" alt="Software Engineering &amp; AI · Python, Web, Android, Kotlin, KI-Agenten und Industrial Software" />
 </div>
 
 <details>
