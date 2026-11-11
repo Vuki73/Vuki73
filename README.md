@@ -205,7 +205,7 @@
 <details>
 <summary><strong>04 · QS-Leitung &amp; technische Qualitätssicherung</strong> · Leitungsverantwortung bei industriellen Anlagenabstellungen</summary>
 
-<img src="assets/expertise/anlagenbau-content-04.svg" width="100%" alt="04 · QS-Leitung &amp; technische Qualitätssicherung – Fachinhalte" />
+<img src="assets/expertise/anlagenbau-content-04-v2.svg" width="100%" alt="04 · QS-Leitung &amp; technische Qualitätssicherung – Fachinhalte" />
 
 </details>
 
