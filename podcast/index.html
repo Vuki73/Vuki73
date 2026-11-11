@@ -18,6 +18,10 @@
     a { display: inline-block; color: #87dcff; margin-top: 23px; text-underline-offset: 4px; font-size: 0.94rem; }
     a:hover, a:focus-visible { color: #fff; }
     .duration { margin: 12px 0 0; color: #92aebf; font-size: .86rem; }
+    .video-overview { margin-top: 30px; padding-top: 28px; border-top: 1px solid #23445c; }
+    .video-overview[hidden] { display: none; }
+    .video-overview h2 { margin: 0 0 18px; font-size: 1.1rem; font-weight: 650; }
+    .video-overview video { display: block; width: 100%; aspect-ratio: 16 / 9; background: #030a12; border-radius: 10px; }
   </style>
 </head>
 <body>
@@ -29,6 +33,23 @@
       Dein Browser unterstützt die Audiowiedergabe nicht.
     </audio>
     <p class="duration">21:08</p>
+    <section id="video-overview" class="video-overview" hidden aria-label="Video">
+      <h2>Video</h2>
+      <video controls controlslist="nodownload" playsinline preload="metadata" aria-label="Video abspielen">
+        <source src="./Vom_Stahlrohr_zum_Python-Code_Video_GitHub.mp4" type="video/mp4">
+        Dein Browser unterstützt die Videowiedergabe nicht.
+      </video>
+      <p class="duration">7:06</p>
+    </section>
   </main>
+  <script>
+    // Only show the video after its MP4 has been uploaded to this repository.
+    const videoFile = "./Vom_Stahlrohr_zum_Python-Code_Video_GitHub.mp4";
+    fetch(videoFile, { method: "HEAD" })
+      .then(response => {
+        if (response.ok) document.getElementById("video-overview").hidden = false;
+      })
+      .catch(() => {});
+  </script>
 </body>
 </html>
