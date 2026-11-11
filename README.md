@@ -52,7 +52,7 @@
 
 <!-- BEGIN SIGEKO | native GitHub one-page accordions; SiFa remains FROZEN -->
 <div align="center">
-<img src="assets/expertise/sigeko-overview.svg" width="100%" alt="SiGeKo · Sicherheits- und Gesundheitsschutzkoordination · BaustellV · RAB 30" />
+<img src="assets/expertise/sigeko-overview-v2.svg" width="100%" alt="SiGeKo · Sicherheits- und Gesundheitsschutzkoordination · BaustellV · RAB 30" />
 </div>
 
 <details>
