@@ -8,7 +8,7 @@
 <!-- BEGIN PODCAST -->
 <div align="center">
 
-[🎙️ **Podcast**](https://vuki73.github.io/Vuki73/podcast/)
+[🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/)
 
 </div>
 <!-- END PODCAST -->
