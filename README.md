@@ -141,4 +141,81 @@
 
 <!-- END BRANDSCHUTZ -->
 
+<!-- BEGIN ARBEITSSCHUTZMANAGEMENT | native GitHub single-page accordions -->
+<div align="center">
+<img src="assets/expertise/ams-overview.svg" width="100%" alt="Arbeitsschutzmanagement &amp; ISO 45001" />
+</div>
+
+<details>
+<summary><strong>01 · SGA-Managementsysteme &amp; ISO 45001</strong> · Organisation, Prozesse und kontinuierliche Verbesserung</summary>
+
+<img src="assets/expertise/ams-content-01.svg" width="100%" alt="01 · SGA-Managementsysteme &amp; ISO 45001 – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>02 · Interne Audits &amp; Systembewertung</strong> · Auditmethodik und Prozessverbesserung</summary>
+
+<img src="assets/expertise/ams-content-02.svg" width="100%" alt="02 · Interne Audits &amp; Systembewertung – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>03 · BBS-Moderation &amp; Sicherheitskultur</strong> · Behavior-Based Safety und aktive Mitarbeiterbeteiligung</summary>
+
+<img src="assets/expertise/ams-content-03.svg" width="100%" alt="03 · BBS-Moderation &amp; Sicherheitskultur – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>04 · Interne Ausbildung &amp; Wissensvermittlung</strong> · ISO-45001-Schulungen und digitale Schulungsmedien</summary>
+
+<img src="assets/expertise/ams-content-04.svg" width="100%" alt="04 · Interne Ausbildung &amp; Wissensvermittlung – Fachinhalte" />
+
+</details>
+
+<!-- END ARBEITSSCHUTZMANAGEMENT -->
+
+<!-- BEGIN ANLAGENBAU | native GitHub single-page accordions -->
+<div align="center">
+<img src="assets/expertise/anlagenbau-overview.svg" width="100%" alt="Rohrleitungs-, Apparate- &amp; Anlagenbau" />
+</div>
+
+<details>
+<summary><strong>01 · Rohrleitungs- &amp; Apparatebau</strong> · Langjährige technische Industrie- und Montagepraxis</summary>
+
+<img src="assets/expertise/anlagenbau-content-01.svg" width="100%" alt="01 · Rohrleitungs- &amp; Apparatebau – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>02 · Bauleitung, Montageaufsicht &amp; Baufeldführung</strong> · Operative Führung und Koordination industrieller Projekte</summary>
+
+<img src="assets/expertise/anlagenbau-content-02.svg" width="100%" alt="02 · Bauleitung, Montageaufsicht &amp; Baufeldführung – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>03 · Technische Arbeitsvorbereitung &amp; Prüfplanung</strong> · Planungsunterlagen, Flanschkontrollen und Prüfpunktpläne</summary>
+
+<img src="assets/expertise/anlagenbau-content-03.svg" width="100%" alt="03 · Technische Arbeitsvorbereitung &amp; Prüfplanung – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>04 · QS-Leitung &amp; technische Qualitätssicherung</strong> · Leitungsverantwortung bei industriellen Anlagenabstellungen</summary>
+
+<img src="assets/expertise/anlagenbau-content-04.svg" width="100%" alt="04 · QS-Leitung &amp; technische Qualitätssicherung – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>05 · Anlagenrevisionen, Dokumentation &amp; Prozessoptimierung</strong> · Turnarounds, Prüfdokumentation und effiziente Abläufe</summary>
+
+<img src="assets/expertise/anlagenbau-content-05.svg" width="100%" alt="05 · Anlagenrevisionen, Dokumentation &amp; Prozessoptimierung – Fachinhalte" />
+
+</details>
+
+<!-- END ANLAGENBAU -->
+
 <!-- END EXPERTISE -->
