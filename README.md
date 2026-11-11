@@ -11,7 +11,7 @@
 
 <img src="assets/expertise/expertise-banner.svg" width="100%" alt="Vuki73 – Fachkompetenzen" />
 
-<a href="https://vuki73.github.io/Vuki73/"><img src="assets/expertise/card-sifa.svg" width="100%" alt="SiFa – Fachkraft für Arbeitssicherheit – interaktive Fachbereiche öffnen" /></a>
+<a href="https://vuki73.github.io/Vuki73/"><img src="assets/expertise/launch-sifa.svg" width="100%" alt="SiFa – Fachkraft für Arbeitssicherheit – interaktive Fachbereiche öffnen" /></a>
 
 </div>
 
