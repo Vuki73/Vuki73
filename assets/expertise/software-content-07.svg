@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="368" viewBox="0 0 960 368" role="img" aria-label="07 · Cloud, DevOps, Testing &amp; Security">
+<rect width="960" height="368" rx="15" fill="#0A1421"/>
+<rect x="1.5" y="1.5" width="957" height="365" rx="11" fill="none" stroke="#30495F" stroke-width="2"/>
+<rect x="20" y="30" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="41" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Versionsverwaltung, Branching und Zusammenarbeit mit Git und GitHub</text>
+<rect x="20" y="67" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="78" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Containerisierung und Entwicklungsumgebungen mit Docker</text>
+<rect x="20" y="104" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="115" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Cloud-Grundlagen und Anwendungsbereitstellung mit Microsoft Azure</text>
+<rect x="20" y="141" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="152" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Grundlagen verteilter Anwendungen und Microservices-Architekturen</text>
+<rect x="20" y="178" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="189" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Frontend-, Backend- und Android-Testing sowie reproduzierbare</text>
+<text x="44" y="214" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Build-Prüfungen</text>
+<rect x="20" y="240" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="251" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Fehlerdiagnose, Logging und technische Qualitätssicherung im</text>
+<text x="44" y="276" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Entwicklungsprozess</text>
+<rect x="20" y="302" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="313" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Security by Design: Zugriffsschutz, Datenschutz und sichere Schnittstellen</text>
+</svg>

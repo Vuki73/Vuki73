@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="443" viewBox="0 0 960 443" role="img" aria-label="05 · Android App Development – Kotlin &amp; Jetpack Compose">
+<rect width="960" height="443" rx="15" fill="#0A1421"/>
+<rect x="1.5" y="1.5" width="957" height="440" rx="11" fill="none" stroke="#30495F" stroke-width="2"/>
+<rect x="20" y="30" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="41" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Praktische Entwicklung nativer Android-Anwendungen mit Kotlin in Android</text>
+<text x="44" y="66" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Studio</text>
+<rect x="20" y="92" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="103" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Moderne deklarative Benutzeroberflächen mit Jetpack Compose und Material</text>
+<text x="44" y="128" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Design 3</text>
+<rect x="20" y="154" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="165" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Implementierung von Benutzerinteraktionen, Einstellungen und</text>
+<text x="44" y="190" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Zustandsverwaltung</text>
+<rect x="20" y="216" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="227" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Entwicklung mobiler Anwendungslogik und konsistenter Bedienkonzepte</text>
+<rect x="20" y="253" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="264" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Umsetzung unterschiedlicher Layoutgrößen, Zeitformate und</text>
+<text x="44" y="289" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Android-Plattformfunktionen</text>
+<rect x="20" y="315" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="326" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Fehleranalyse, Build-Prüfungen und automatisierte JVM- und Android-Tests</text>
+<rect x="20" y="352" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="363" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Optimierung von Bedienbarkeit, Wartbarkeit und Stabilität mobiler</text>
+<text x="44" y="388" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Anwendungen</text>
+</svg>

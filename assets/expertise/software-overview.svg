@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="100" viewBox="0 0 960 100" role="img" aria-label="Software Engineering &amp; AI">
+<rect width="960" height="100" rx="15" fill="#0A1421"/>
+<rect x="1.5" y="1.5" width="957" height="97" rx="14" fill="none" stroke="#30495F" stroke-width="2"/>
+<text x="26" y="37" font-family="Arial,DejaVu Sans,sans-serif" font-size="23" font-weight="700" fill="#E6EFF8">Software Engineering &amp; AI</text>
+<text x="26" y="67" font-family="Arial,DejaVu Sans,sans-serif" font-size="16" fill="#7FD5F9">Python · Web · Android &amp; Kotlin · KI-Agenten · Industrial Software</text>
+<text x="935" y="86" text-anchor="end" font-family="Arial,DejaVu Sans,sans-serif" font-size="14" font-weight="600" fill="#5CE69B">Apps · Cloud · Automation</text>
+</svg>

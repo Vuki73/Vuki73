@@ -218,4 +218,74 @@
 
 <!-- END ANLAGENBAU -->
 
+<!-- BEGIN SOFTWARE_ENGINEERING_AI | native GitHub single-page accordions; earlier sections FROZEN -->
+<div align="center">
+<img src="assets/expertise/software-overview.svg" width="100%" alt="Software Engineering &amp; AI · Python, Web, Android, Kotlin, KI-Agenten und Industrial Software" />
+</div>
+
+<details>
+<summary><strong>01 · Software Engineering, Architektur &amp; Algorithmen</strong> · Entwurf, Programmierung und Softwarequalität</summary>
+
+<img src="assets/expertise/software-content-01.svg" width="100%" alt="01 · Software Engineering, Architektur &amp; Algorithmen – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>02 · Python, Datenstrukturen &amp; Automatisierung</strong> · Algorithmen, Skripte und datengetriebene Anwendungen</summary>
+
+<img src="assets/expertise/software-content-02.svg" width="100%" alt="02 · Python, Datenstrukturen &amp; Automatisierung – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>03 · Frontend Development – JavaScript, React &amp; TypeScript</strong> · Moderne Weboberflächen und interaktive Anwendungen</summary>
+
+<img src="assets/expertise/software-content-03.svg" width="100%" alt="03 · Frontend Development – JavaScript, React &amp; TypeScript – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>04 · Backend Development, APIs &amp; Datenbanken</strong> · Python, Flask, SQL, C# und ASP.NET</summary>
+
+<img src="assets/expertise/software-content-04.svg" width="100%" alt="04 · Backend Development, APIs &amp; Datenbanken – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>05 · Android App Development – Kotlin &amp; Jetpack Compose</strong> · Native Android-Anwendungen und Mobile Engineering</summary>
+
+<img src="assets/expertise/software-content-05.svg" width="100%" alt="05 · Android App Development – Kotlin &amp; Jetpack Compose – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>06 · Artificial Intelligence, LLMs &amp; AI Agents</strong> · KI-Integration, MCP und agentengestützte Workflows</summary>
+
+<img src="assets/expertise/software-content-06.svg" width="100%" alt="06 · Artificial Intelligence, LLMs &amp; AI Agents – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>07 · Cloud, DevOps, Testing &amp; Security</strong> · Docker, Azure, Git und zuverlässiger Softwarebetrieb</summary>
+
+<img src="assets/expertise/software-content-07.svg" width="100%" alt="07 · Cloud, DevOps, Testing &amp; Security – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>08 · Safety-Tech &amp; Industrial Software</strong> · Sicherheitstechnische Anwendungen und digitale Industrieprozesse</summary>
+
+<img src="assets/expertise/software-content-08.svg" width="100%" alt="08 · Safety-Tech &amp; Industrial Software – Fachinhalte" />
+
+</details>
+
+<details>
+<summary><strong>09 · Excel Advanced, Datenanalyse &amp; Projektmanagement</strong> · Tabellenmodelle, Auswertungen und digitale Arbeitsprozesse</summary>
+
+<img src="assets/expertise/software-content-09.svg" width="100%" alt="09 · Excel Advanced, Datenanalyse &amp; Projektmanagement – Fachinhalte" />
+
+</details>
+
+<!-- END SOFTWARE_ENGINEERING_AI -->
+
 <!-- END EXPERTISE -->

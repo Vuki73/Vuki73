@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="393" viewBox="0 0 960 393" role="img" aria-label="04 · Backend Development, APIs &amp; Datenbanken">
+<rect width="960" height="393" rx="15" fill="#0A1421"/>
+<rect x="1.5" y="1.5" width="957" height="390" rx="11" fill="none" stroke="#30495F" stroke-width="2"/>
+<rect x="20" y="30" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="41" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Backend-Entwicklung mit Python und Flask sowie C# und ASP.NET</text>
+<rect x="20" y="67" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="78" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Konzeption und Implementierung von RESTful APIs und</text>
+<text x="44" y="103" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Client-Server-Schnittstellen</text>
+<rect x="20" y="129" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="140" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Relationale Datenmodellierung und Datenverarbeitung mit SQL</text>
+<rect x="20" y="166" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="177" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Validierung von Eingaben, Fehlerbehandlung und strukturierte API-Antworten</text>
+<rect x="20" y="203" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="214" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Trennung von Geschäftslogik, Datenzugriff und Schnittstellenschicht</text>
+<rect x="20" y="240" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="251" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Backend-Tests, Nachvollziehbarkeit und technische Dokumentation von</text>
+<text x="44" y="276" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Funktionen</text>
+<rect x="20" y="302" width="8" height="8" rx="1" fill="#58DF98"/>
+<text x="44" y="313" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Berücksichtigung von Authentifizierung, Autorisierung und sicherer</text>
+<text x="44" y="338" font-size="17" font-family="Arial,DejaVu Sans,sans-serif" fill="#E1EAF5">Datenverarbeitung</text>
+</svg>
