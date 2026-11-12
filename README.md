@@ -8,7 +8,7 @@
 <!-- BEGIN PODCAST -->
 <div align="center">
 
-[🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/)
+[🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/) &nbsp;·&nbsp; [🎵 **Soundtrack: „Noch ein bisschen coden“ (03:12 Uhr)**](https://vuki73.github.io/Vuki73/soundtrack/)
 
 </div>
 <!-- END PODCAST -->

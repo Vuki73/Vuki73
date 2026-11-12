@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>🎵 Vuki73 · Terminal Soundtrack – Noch ein bisschen coden (03:12)</title>
+<style>
+:root{
+  --bg:#090d12; --panel:#0f1620; --panel2:#16202e; --line:#243246;
+  --ink:#e6edf3; --mute:#8b9bb4; --cyan:#38bdf8; --green:#3fb950; --gold:#ffd23f;
+}
+*{box-sizing:border-box}
+html,body{margin:0;min-height:100vh;background:radial-gradient(circle at 20% 10%,#132136 0%,var(--bg) 55%);color:var(--ink);font-family:'JetBrains Mono',Consolas,'Courier New',monospace;display:flex;align-items:center;justify-content:center;padding:20px}
+.term{width:100%;max-width:780px;background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:0 24px 60px #000a,0 0 40px #38bdf814;overflow:hidden}
+.tbar{display:flex;align-items:center;gap:8px;padding:12px 16px;background:var(--panel2);border-bottom:1px solid var(--line)}
+.dot{width:12px;height:12px;border-radius:50%}
+.dot.r{background:#ff5f56}.dot.y{background:#ffbd2e}.dot.g{background:#27c93f}
+.tbar .title{margin-left:8px;font-size:13px;color:var(--mute);flex:1}
+.tbar a{color:var(--cyan);text-decoration:none;font-size:12px;border:1px solid var(--line);padding:4px 10px;border-radius:8px}
+.tbar a:hover{border-color:var(--cyan)}
+.body{padding:22px}
+.prompt{color:var(--green);font-size:13px;margin-bottom:8px}
+.prompt span{color:var(--mute)}
+h1{margin:0 0 4px;font-size:24px;color:#fff;letter-spacing:.3px}
+.meta{color:var(--gold);font-size:13px;margin-bottom:18px}
+.vis-wrap{background:#06090d;border:1px solid var(--line);border-radius:14px;padding:14px 14px 8px;margin-bottom:18px;position:relative}
+canvas{width:100%;height:150px;display:block}
+.clock{position:absolute;top:12px;right:14px;font-size:12px;color:var(--cyan);background:#090d12cc;padding:3px 8px;border-radius:6px;border:1px solid #38bdf844}
+.controls{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.playbtn{border:0;border-radius:12px;background:linear-gradient(135deg,var(--gold),#ff9f43);color:#111;font-weight:800;font-family:inherit;font-size:14px;padding:11px 20px;cursor:pointer;display:flex;align-items:center;gap:8px;transition:.15s}
+.playbtn:hover{transform:translateY(-1px);filter:brightness(1.08)}
+.seek-wrap{flex:1;min-width:180px;display:flex;align-items:center;gap:10px}
+input[type="range"]{accent-color:var(--cyan);cursor:pointer}
+.seek{width:100%}
+.time{font-size:12.5px;color:var(--mute);min-width:92px;text-align:right}
+.vol-wrap{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--mute)}
+.vol{width:76px}
+.lyrics{background:#06090d;border:1px solid var(--line);border-radius:12px;padding:14px 16px;font-size:13px;line-height:1.7;color:var(--mute);max-height:185px;overflow-y:auto}
+.lyrics b{color:var(--ink)}
+.lyrics .hi{color:var(--gold);font-weight:700}
+.footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;font-size:12.5px}
+.footer-links a{color:var(--ink);text-decoration:none;background:var(--panel2);border:1px solid var(--line);padding:7px 12px;border-radius:9px}
+.footer-links a:hover{border-color:var(--gold);color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="term">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/soundtrack — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="03:12_Uhr_Late_Night_Coding" --artist="Vuki73"</span></div>
+    <h1>🎵 „Noch ein bisschen coden“ (03:12 Uhr)</h1>
+    <div class="meta">From Steel Pipelines to Python Pipelines · Synthwave / Late-Night Dev Anthem</div>
+
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge">● READY · KLICK PLAY</div>
+      <canvas id="vis" width="700" height="150"></canvas>
+    </div>
+
+    <div class="controls">
+      <button class="playbtn" id="playBtn" onclick="togglePlay()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek" min="0" max="100" value="0" step="0.1" oninput="seekTo(this.value)">
+        <div class="time" id="timeLbl">00:00 / 00:00</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol" min="0" max="1" step="0.02" value="0.85" oninput="setVol(this.value)">
+      </div>
+    </div>
+
+    <div class="lyrics">
+      <div><b>[Intro · 03:12 Uhr]</b></div>
+      <div>Es ist 3 Uhr 12 · Der Bildschirm leuchtet · Der Kaffee ist kalt · <span class="hi">Der Code lebt.</span></div>
+      <br>
+      <div><b>[Verse]</b></div>
+      <div>Ich sitze hier seit Stunden schon · Die Stadt schläft längst, doch ich noch nicht.</div>
+      <div>Die Tastatur, sie kennt mich gut · Mein Cursor tanzt im Neonblau.</div>
+      <div>Nur noch ein Test, nur noch ein Run, nur noch ein kleiner Klick…</div>
+      <div>Nur noch ein Fix, nur noch ein Commit und dann vielleicht zurück.</div>
+      <br>
+      <div><b>[Hook]</b></div>
+      <div class="hi">Du Mann, ich will noch nicht schlafen – ich will noch ein bisschen coden!</div>
+      <div class="hi">Nur noch ein Loop, nur noch ein Move – ich will den Flow nicht stoppen!</div>
+      <div>Wenn draußen schon der Morgen graut, hab ich den Fehler eingebaut… und wieder ausgebaut.</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
+
+<audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
+
+<script>
+const audio = document.getElementById("audio");
+const playBtn = document.getElementById("playBtn");
+const seek = document.getElementById("seek");
+const timeLbl = document.getElementById("timeLbl");
+const statusBadge = document.getElementById("statusBadge");
+const canvas = document.getElementById("vis");
+const ctx = canvas.getContext("2d");
+
+let actx = null, analyser = null, srcNode = null, dataArr = null;
+let animId = null;
+
+function fmt(sec){
+  if(!isFinite(sec)) return "00:00";
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+}
+
+function initAudioCtx(){
+  if(actx) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if(!AC) return;
+  actx = new AC();
+  analyser = actx.createAnalyser();
+  analyser.fftSize = 128;
+  srcNode = actx.createMediaElementSource(audio);
+  srcNode.connect(analyser);
+  analyser.connect(actx.destination);
+  dataArr = new Uint8Array(analyser.frequencyBinCount);
+}
+
+function drawIdle(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const bars = 48;
+  const w = canvas.width / bars;
+  for(let i=0;i<bars;i++){
+    const h = 8 + Math.sin(Date.now()/400 + i*0.4)*4;
+    ctx.fillStyle = "rgba(56, 189, 248, 0.25)";
+    ctx.fillRect(i*w + 3, canvas.height - h, w - 6, h);
+  }
+  if(audio.paused) animId = requestAnimationFrame(drawIdle);
+}
+
+function drawLive(){
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  if(analyser && dataArr){
+    analyser.getByteFrequencyData(dataArr);
+    const bars = 48;
+    const w = canvas.width / bars;
+    for(let i=0;i<bars;i++){
+      const val = dataArr[i] || 0;
+      const h = Math.max(6, (val / 255) * (canvas.height - 16));
+      const grad = ctx.createLinearGradient(0, canvas.height - h, 0, canvas.height);
+      grad.addColorStop(0, "#ffd23f");
+      grad.addColorStop(0.5, "#38bdf8");
+      grad.addColorStop(1, "#3fb950");
+      ctx.fillStyle = grad;
+      ctx.fillRect(i*w + 3, canvas.height - h, w - 6, h);
+    }
+  }
+  if(!audio.paused) animId = requestAnimationFrame(drawLive);
+}
+
+function togglePlay(){
+  initAudioCtx();
+  if(actx && actx.state === "suspended") actx.resume();
+  if(audio.paused){
+    audio.play();
+    playBtn.textContent = "⏸ PAUSE";
+    statusBadge.textContent = "▶ PLAYING · DER CODE LEBT";
+    statusBadge.style.color = "#3fb950";
+    cancelAnimationFrame(animId);
+    drawLive();
+  } else {
+    audio.pause();
+    playBtn.textContent = "▶ PLAY TRACK";
+    statusBadge.textContent = "❚❚ PAUSED";
+    statusBadge.style.color = "#ffd23f";
+    cancelAnimationFrame(animId);
+    drawIdle();
+  }
+}
+
+function seekTo(pct){
+  if(isFinite(audio.duration)){
+    audio.currentTime = (pct / 100) * audio.duration;
+  }
+}
+function setVol(v){ audio.volume = parseFloat(v); }
+
+audio.addEventListener("loadedmetadata", () => {
+  timeLbl.textContent = `00:00 / ${fmt(audio.duration)}`;
+});
+audio.addEventListener("timeupdate", () => {
+  if(isFinite(audio.duration) && audio.duration > 0){
+    seek.value = (audio.currentTime / audio.duration) * 100;
+    timeLbl.textContent = `${fmt(audio.currentTime)} / ${fmt(audio.duration)}`;
+  }
+});
+audio.addEventListener("ended", () => {
+  playBtn.textContent = "▶ PLAY TRACK";
+  statusBadge.textContent = "● FINISHED · REPLAY?";
+  statusBadge.style.color = "#38bdf8";
+  cancelAnimationFrame(animId);
+  drawIdle();
+});
+
+drawIdle();
+</script>
+</body>
+</html>
