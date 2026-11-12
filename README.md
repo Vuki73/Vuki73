@@ -16,8 +16,7 @@
 <!-- BEGIN LIVE_SHOWCASE -->
 <div align="center">
 
-[![🐍 PCEP Gehirn-Trainer (Live Web-App)](https://img.shields.io/badge/%F0%9F%90%8D%20PCEP%20Gehirn--Trainer%20(200%20Fragen)-%F0%9F%9A%80%20Live%20Web--App%20starten-ffd23f?style=for-the-badge&logo=python&logoColor=black)](https://vuki73.github.io/pcep-gehirn-trainer/)
-[![📦 GitHub Repository](https://img.shields.io/badge/%F0%9F%93%A6%20Quellcode%20%26%20Python%20GUI-pcep--gehirn--trainer-1b1f2e?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Vuki73/pcep-gehirn-trainer)
+[![🐍 PCEP Gehirn-Trainer (200 Fragen)](https://img.shields.io/badge/%F0%9F%90%8D%20PCEP%20Gehirn--Trainer%20(200%20Fragen)-%F0%9F%9A%80%20Live%20Web--App%20starten-ffd23f?style=for-the-badge&logo=python&logoColor=black)](https://vuki73.github.io/pcep-gehirn-trainer/)
 
 </div>
 <!-- END LIVE_SHOWCASE -->
