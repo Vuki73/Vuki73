@@ -161,16 +161,26 @@ function drawLive(){
   if(!audio.paused) animId = requestAnimationFrame(drawLive);
 }
 
-function togglePlay(){
+async function togglePlay(){
   initAudioCtx();
-  if(actx && actx.state === "suspended") actx.resume();
+  if(actx && actx.state === "suspended"){
+    try{ await actx.resume(); }catch(e){}
+  }
   if(audio.paused){
-    audio.play();
-    playBtn.textContent = "⏸ PAUSE";
-    statusBadge.textContent = "▶ PLAYING · DER CODE LEBT";
-    statusBadge.style.color = "#3fb950";
-    cancelAnimationFrame(animId);
-    drawLive();
+    try{
+      await audio.play();
+      playBtn.textContent = "⏸ PAUSE";
+      statusBadge.textContent = "▶ PLAYING · DER CODE LEBT";
+      statusBadge.style.color = "#3fb950";
+      cancelAnimationFrame(animId);
+      drawLive();
+    }catch(err){
+      playBtn.textContent = "▶ PLAY TRACK";
+      statusBadge.textContent = "✖ PLAYBACK BLOCKED · ERNEUT KLICKEN";
+      statusBadge.style.color = "#ff5f56";
+      cancelAnimationFrame(animId);
+      drawIdle();
+    }
   } else {
     audio.pause();
     playBtn.textContent = "▶ PLAY TRACK";
