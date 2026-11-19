@@ -41,9 +41,14 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
 .footer-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;font-size:12.5px}
 .footer-links a{color:var(--ink);text-decoration:none;background:var(--panel2);border:1px solid var(--line);padding:7px 12px;border-radius:9px}
 .footer-links a:hover{border-color:var(--gold);color:var(--gold)}
+
+.stack{width:100%;max-width:780px;display:flex;flex-direction:column;gap:24px}
+.stack .term{max-width:100%}
+.term[id]{scroll-margin-top:24px}
 </style>
 </head>
 <body>
+<div class="stack">
 <div class="term">
   <div class="tbar">
     <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
@@ -95,7 +100,61 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
   </div>
 </div>
 
+<div class="term" id="waelzt-gedanken">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/electrocode — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="ELECTROCODE" --artist="VUK &amp; THE MORMONIC AI"</span></div>
+    <h1>🎹 „WÄLZT GEDANKEN“</h1>
+    <div class="meta">VUK &amp; THE MORMONIC AI · German ElectroCode / Dark Electronic · 05:53</div>
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge2">● READY · KLICK PLAY</div>
+      <canvas id="vis2" width="700" height="150" aria-label="Audio-Visualisierung Wälzt Gedanken"></canvas>
+    </div>
+    <div class="controls">
+      <button class="playbtn" id="playBtn2" onclick="togglePlay2()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek2" min="0" max="100" value="0" step="0.1" aria-label="Position im Track Wälzt Gedanken" oninput="seekTo2(this.value)">
+        <div class="time" id="timeLbl2">00:00 / 05:53</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol2" min="0" max="1" step="0.02" value="0.85" aria-label="Lautstärke Wälzt Gedanken" oninput="setVol2(this.value)">
+      </div>
+    </div>
+    <div class="lyrics">
+      <div><b>[Intro · ELECTROCODE]</b></div>
+      <div>Auftrag empfangen. Fehler erkannt. Lösung wird vorbereitet.</div>
+      <div class="hi">Ich wälze Gedanken.</div>
+      <br>
+      <div><b>[Verse]</b></div>
+      <div>Ein Fehler blinkt im Terminal, die Lösung klein, die Nacht brutal.</div>
+      <div>Ich sag: „Nur diesen einen Fix!“ Du sagst: „Es gibt noch hundert Tricks.“</div>
+      <div>Aus einem Wenn wird ein Vielleicht, das bis zum nächsten Morgen reicht.</div>
+      <div>Der Cursor blinkt, ich bin bereit – du sagst: „Ich brauche etwas Zeit.“</div>
+      <br>
+      <div><b>[Hook]</b></div>
+      <div class="hi">WÄLZT GEDANKEN! Hin und her, die halbe Nacht!</div>
+      <div class="hi">WÄLZT GEDANKEN! Keiner weiß, was er da macht!</div>
+      <div>Ich will nur ’nen grünen Build – du hast die Sterne durchgezählt!</div>
+      <br>
+      <div><b>[Bridge]</b></div>
+      <div>Kontext wird automatisch komprimiert …</div>
+      <div class="hi">Ich … wälze … Gedanken.</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
+</div>
+
 <audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
+<audio id="audio2" src="waelzt-gedanken.mp3" preload="metadata"></audio>
 
 <script>
 const audio = document.getElementById("audio");
@@ -216,6 +275,125 @@ audio.addEventListener("ended", () => {
 });
 
 drawIdle();
+
+const audio2 = document.getElementById("audio2");
+const playBtn2 = document.getElementById("playBtn2");
+const seek2 = document.getElementById("seek2");
+const timeLbl2 = document.getElementById("timeLbl2");
+const statusBadge2 = document.getElementById("statusBadge2");
+const canvas2 = document.getElementById("vis2");
+const ctx2 = canvas2.getContext("2d");
+let actx2 = null, analyser2 = null, dataArr2 = null, animId2 = null;
+audio2.volume = 0.85;
+
+function initAudioCtx2(){
+  if(actx2) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if(!AC) return;
+  actx2 = new AC();
+  analyser2 = actx2.createAnalyser();
+  analyser2.fftSize = 128;
+  const srcNode2 = actx2.createMediaElementSource(audio2);
+  srcNode2.connect(analyser2);
+  analyser2.connect(actx2.destination);
+  dataArr2 = new Uint8Array(analyser2.frequencyBinCount);
+}
+function drawIdle2(){
+  ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+  const bars=48, w=canvas2.width/bars;
+  for(let i=0;i<bars;i++){
+    const h=8+Math.sin(Date.now()/400+i*0.4)*4;
+    ctx2.fillStyle="rgba(56, 189, 248, 0.25)";
+    ctx2.fillRect(i*w+3,canvas2.height-h,w-6,h);
+  }
+  if(audio2.paused) animId2=requestAnimationFrame(drawIdle2);
+}
+function drawLive2(){
+  ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+  if(analyser2 && dataArr2){
+    analyser2.getByteFrequencyData(dataArr2);
+    const bars=48,w=canvas2.width/bars;
+    for(let i=0;i<bars;i++){
+      const h=Math.max(6,((dataArr2[i]||0)/255)*(canvas2.height-16));
+      const grad=ctx2.createLinearGradient(0,canvas2.height-h,0,canvas2.height);
+      grad.addColorStop(0,"#ffd23f");
+      grad.addColorStop(0.5,"#38bdf8");
+      grad.addColorStop(1,"#3fb950");
+      ctx2.fillStyle=grad;
+      ctx2.fillRect(i*w+3,canvas2.height-h,w-6,h);
+    }
+  }
+  if(!audio2.paused)animId2=requestAnimationFrame(drawLive2);
+}
+async function togglePlay2(){
+  if(!audio2.paused){
+    audio2.pause();
+    return;
+  }
+  initAudioCtx2();
+  if(actx2 && actx2.state==="suspended"){
+    try{await actx2.resume();}catch(e){}
+  }
+  try{
+    await audio2.play();
+  }catch(e){
+    playBtn2.textContent="▶ PLAY TRACK";
+    statusBadge2.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+    statusBadge2.style.color="#ff5f56";
+  }
+}
+function seekTo2(pct){
+  if(isFinite(audio2.duration) && audio2.duration>0){
+    audio2.currentTime=(pct/100)*audio2.duration;
+  }
+}
+function setVol2(v){audio2.volume=parseFloat(v);}
+audio2.addEventListener("loadedmetadata",()=>{
+  timeLbl2.textContent="00:00 / "+fmt(audio2.duration);
+});
+audio2.addEventListener("timeupdate",()=>{
+  if(isFinite(audio2.duration) && audio2.duration>0){
+    seek2.value=(audio2.currentTime/audio2.duration)*100;
+    timeLbl2.textContent=fmt(audio2.currentTime)+" / "+fmt(audio2.duration);
+  }
+});
+audio2.addEventListener("play",()=>{
+  if(!audio.paused)audio.pause();
+  playBtn2.textContent="⏸ PAUSE";
+  statusBadge2.textContent="▶ PLAYING · WÄLZT GEDANKEN";
+  statusBadge2.style.color="#3fb950";
+  cancelAnimationFrame(animId2);
+  drawLive2();
+});
+audio2.addEventListener("pause",()=>{
+  playBtn2.textContent="▶ PLAY TRACK";
+  if(!audio2.ended) statusBadge2.textContent="❚❚ PAUSED";
+  cancelAnimationFrame(animId2);
+  drawIdle2();
+});
+audio2.addEventListener("ended",()=>{
+  playBtn2.textContent="▶ PLAY TRACK";
+  statusBadge2.textContent="● FINISHED · REPLAY?";
+  statusBadge2.style.color="#38bdf8";
+});
+audio2.addEventListener("error",()=>{
+  playBtn2.textContent="▶ PLAY TRACK";
+  statusBadge2.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+  statusBadge2.style.color="#ff5f56";
+});
+audio.addEventListener("play",()=>{
+  if(!audio2.paused)audio2.pause();
+});
+audio.addEventListener("pause",()=>{
+  if(!audio.ended){
+    playBtn.textContent="▶ PLAY TRACK";
+    statusBadge.textContent="❚❚ PAUSED";
+    cancelAnimationFrame(animId);
+    drawIdle();
+  }
+});
+drawIdle2();
+
 </script>
 </body>
 </html>
