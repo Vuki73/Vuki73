@@ -11,6 +11,11 @@
 [🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/) &nbsp;·&nbsp; [🎵 **Soundtrack: „Noch ein bisschen coden“ (03:12 Uhr)**](https://vuki73.github.io/Vuki73/soundtrack/)
 
 </div>
+<div align="center">
+
+[🎹 **ELECTROCODE: „WÄLZT GEDANKEN“ · Track anhören (05:53)**](https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken)
+
+</div>
 <!-- END PODCAST -->
 
 <!-- BEGIN LIVE_SHOWCASE -->
