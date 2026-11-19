@@ -151,10 +151,65 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
     </div>
   </div>
 </div>
+
+<div class="term" id="steuerung-alt-tanz">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/soundtrack — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="DANCE" --artist="VUK &amp; THE MORMONIC AI"</span></div>
+    <h1>🎹 „STEUERUNG ALT TANZ“</h1>
+    <div class="meta">VUK &amp; THE MORMONIC AI · German Electro / Dance</div>
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge3">● READY · KLICK PLAY</div>
+      <canvas id="vis3" width="700" height="150" aria-label="Audio-Visualisierung Steuerung Alt Tanz"></canvas>
+    </div>
+    <div class="controls">
+      <button class="playbtn" id="playBtn3" onclick="togglePlay3()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek3" min="0" max="100" value="0" step="0.1" aria-label="Position im Track Steuerung Alt Tanz" oninput="seekTo3(this.value)">
+        <div class="time" id="timeLbl3">00:00 / 00:00</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol3" min="0" max="1" step="0.02" value="0.85" aria-label="Lautstärke Steuerung Alt Tanz" oninput="setVol3(this.value)">
+      </div>
+    </div>
+    <div class="lyrics">
+      <div><b>[Intro]</b></div>
+      <div>Automatischer Neustart in zehn Sekunden.</div>
+      <div>Nicht gespeicherte Party kann verloren gehen.</div>
+      <br>
+      <div><b>[Verse]</b></div>
+      <div>Freitag Nacht, die Kellerluft, ein Laser malt den Raum.</div>
+      <div>Der DJ hebt die Hände hoch, das glaubt ihm keiner kaum.</div>
+      <div>Die Menge wartet auf den Drop, die Boxen stehen bereit.</div>
+      <div>Da friert das ganze Mischpult ein, ausgerechnet jetzt zur besten Zeit!</div>
+      <br>
+      <div><b>[Chorus]</b></div>
+      <div class="hi">STEUERUNG! ALT! TANZ!</div>
+      <div class="hi">DIE NACHT GEHT GERADE ERST AN!</div>
+      <div>KEIN NEUSTART HÄLT UNS HEUTE AN!</div>
+      <div>DER BILDSCHIRM BLAU, DIE LICHTER BUNT!</div>
+      <div>DER BASS GEHT TIEF BIS AUF DEN GRUND!</div>
+      <br>
+      <div><b>[Bridge]</b></div>
+      <div>Steuerung. Alt. Tanz. Diese Kombination existiert nicht.</div>
+      <div class="hi">Dann haben wir sie gerade erfunden. SIE FUNKTIONIERT!</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
 <audio id="audio2" src="waelzt-gedanken.mp3" preload="metadata"></audio>
+<audio id="audio3" src="steuerung-alt-tanz.mp3" preload="metadata"></audio>
 
 <script>
 const audio = document.getElementById("audio");
@@ -393,6 +448,107 @@ audio.addEventListener("pause",()=>{
   }
 });
 drawIdle2();
+
+const audio3=document.getElementById("audio3");
+const playBtn3=document.getElementById("playBtn3");
+const seek3=document.getElementById("seek3");
+const timeLbl3=document.getElementById("timeLbl3");
+const statusBadge3=document.getElementById("statusBadge3");
+const canvas3=document.getElementById("vis3");
+const ctx3=canvas3.getContext("2d");
+let actx3=null,analyser3=null,dataArr3=null,animId3=null;
+audio3.volume=0.85;
+function initAudioCtx3(){
+  if(actx3)return;
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  actx3=new AC();
+  analyser3=actx3.createAnalyser();
+  analyser3.fftSize=128;
+  const srcNode3=actx3.createMediaElementSource(audio3);
+  srcNode3.connect(analyser3);
+  analyser3.connect(actx3.destination);
+  dataArr3=new Uint8Array(analyser3.frequencyBinCount);
+}
+function drawIdle3(){
+  ctx3.clearRect(0,0,canvas3.width,canvas3.height);
+  const bars=48,w=canvas3.width/bars;
+  for(let i=0;i<bars;i++){
+    const h=8+Math.sin(Date.now()/400+i*0.4)*4;
+    ctx3.fillStyle="rgba(56, 189, 248, 0.25)";
+    ctx3.fillRect(i*w+3,canvas3.height-h,w-6,h);
+  }
+  if(audio3.paused)animId3=requestAnimationFrame(drawIdle3);
+}
+function drawLive3(){
+  ctx3.clearRect(0,0,canvas3.width,canvas3.height);
+  if(analyser3&&dataArr3){
+    analyser3.getByteFrequencyData(dataArr3);
+    const bars=48,w=canvas3.width/bars;
+    for(let i=0;i<bars;i++){
+      const h=Math.max(6,((dataArr3[i]||0)/255)*(canvas3.height-16));
+      const grad=ctx3.createLinearGradient(0,canvas3.height-h,0,canvas3.height);
+      grad.addColorStop(0,"#ffd23f");
+      grad.addColorStop(0.5,"#38bdf8");
+      grad.addColorStop(1,"#3fb950");
+      ctx3.fillStyle=grad;
+      ctx3.fillRect(i*w+3,canvas3.height-h,w-6,h);
+    }
+  }
+  if(!audio3.paused)animId3=requestAnimationFrame(drawLive3);
+}
+async function togglePlay3(){
+  if(!audio3.paused){audio3.pause();return;}
+  initAudioCtx3();
+  if(actx3&&actx3.state==="suspended"){
+    try{await actx3.resume();}catch(e){}
+  }
+  try{await audio3.play();}
+  catch(e){
+    playBtn3.textContent="▶ PLAY TRACK";
+    statusBadge3.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+    statusBadge3.style.color="#ff5f56";
+  }
+}
+function seekTo3(pct){
+  if(isFinite(audio3.duration)&&audio3.duration>0)audio3.currentTime=(pct/100)*audio3.duration;
+}
+function setVol3(v){audio3.volume=parseFloat(v);}
+audio3.addEventListener("loadedmetadata",()=>{
+  timeLbl3.textContent="00:00 / "+fmt(audio3.duration);
+});
+audio3.addEventListener("timeupdate",()=>{
+  if(isFinite(audio3.duration)&&audio3.duration>0){
+    seek3.value=(audio3.currentTime/audio3.duration)*100;
+    timeLbl3.textContent=fmt(audio3.currentTime)+" / "+fmt(audio3.duration);
+  }
+});
+audio3.addEventListener("play",()=>{
+  if(!audio.paused)audio.pause();
+  if(!audio2.paused)audio2.pause();
+  playBtn3.textContent="⏸ PAUSE";
+  statusBadge3.textContent="▶ PLAYING · STEUERUNG ALT TANZ";
+  statusBadge3.style.color="#3fb950";
+  cancelAnimationFrame(animId3);drawLive3();
+});
+audio3.addEventListener("pause",()=>{
+  playBtn3.textContent="▶ PLAY TRACK";
+  if(!audio3.ended)statusBadge3.textContent="❚❚ PAUSED";
+  cancelAnimationFrame(animId3);drawIdle3();
+});
+audio3.addEventListener("ended",()=>{
+  playBtn3.textContent="▶ PLAY TRACK";
+  statusBadge3.textContent="● FINISHED · REPLAY?";
+  statusBadge3.style.color="#38bdf8";
+});
+audio3.addEventListener("error",()=>{
+  playBtn3.textContent="▶ PLAY TRACK";
+  statusBadge3.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+  statusBadge3.style.color="#ff5f56";
+});
+audio.addEventListener("play",()=>{if(!audio3.paused)audio3.pause();});
+audio2.addEventListener("play",()=>{if(!audio3.paused)audio3.pause();});
+drawIdle3();
 
 </script>
 </body>
