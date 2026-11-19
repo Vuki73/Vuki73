@@ -8,12 +8,12 @@
 <!-- BEGIN PODCAST -->
 <div align="center">
 
-[🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/) &nbsp;·&nbsp; [🎵 **Soundtrack: „Noch ein bisschen coden“**](https://vuki73.github.io/Vuki73/soundtrack/)
+[🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/)
 
 </div>
 <div align="center">
 
-[🎵 **Soundtrack: „WÄLZT GEDANKEN“**](https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken)
+[🎵 **Soundtrack: „Noch ein bisschen coden“**](https://vuki73.github.io/Vuki73/soundtrack/) &nbsp;·&nbsp; [🎵 **Soundtrack: „WÄLZT GEDANKEN“**](https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken)
 
 </div>
 <!-- END PODCAST -->
