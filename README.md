@@ -13,7 +13,7 @@
 </div>
 <div align="center">
 
-[🎹 **ELECTROCODE: „WÄLZT GEDANKEN“ · Track anhören (05:53)**](https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken)
+[🎵 **Soundtrack: „WÄLZT GEDANKEN“**](https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken)
 
 </div>
 <!-- END PODCAST -->
