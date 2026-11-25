@@ -11,6 +11,14 @@
 [🎙️ **Podcast & 🎬 Erklärvideo**](https://vuki73.github.io/Vuki73/podcast/)
 
 </div>
+<!-- BEGIN LIVE_SHOWCASE -->
+<div align="center">
+
+[![🐍 PCEP Gehirn-Trainer (200 Fragen)](https://img.shields.io/badge/%F0%9F%90%8D%20PCEP%20Gehirn--Trainer%20(200%20Fragen)-%F0%9F%9A%80%20Live%20Web--App%20starten-ffd23f?style=for-the-badge&logo=python&logoColor=black)](https://vuki73.github.io/pcep-gehirn-trainer/)
+
+</div>
+<!-- END LIVE_SHOWCASE -->
+
 <div align="center">
 <img src="assets/soundtrack-header.svg" width="100%" alt="Terminal Soundtrack · 4 Tracks · Vuki73 / VUK &amp; THE MORMONIC AI" />
 <br>
@@ -19,14 +27,6 @@
 <a href="https://vuki73.github.io/Vuki73/soundtrack/#steuerung-alt-tanz"><img src="assets/soundtrack-steuerung-alt-tanz.svg" width="49%" alt="Track 03: STEUERUNG ALT TANZ – abspielen" /></a> <a href="https://vuki73.github.io/Vuki73/soundtrack/#mensch-ausser-betrieb"><img src="assets/soundtrack-mensch-ausser-betrieb.svg" width="49%" alt="Track 04: MENSCH AUSSER BETRIEB – abspielen" /></a>
 </div>
 <!-- END PODCAST -->
-
-<!-- BEGIN LIVE_SHOWCASE -->
-<div align="center">
-
-[![🐍 PCEP Gehirn-Trainer (200 Fragen)](https://img.shields.io/badge/%F0%9F%90%8D%20PCEP%20Gehirn--Trainer%20(200%20Fragen)-%F0%9F%9A%80%20Live%20Web--App%20starten-ffd23f?style=for-the-badge&logo=python&logoColor=black)](https://vuki73.github.io/pcep-gehirn-trainer/)
-
-</div>
-<!-- END LIVE_SHOWCASE -->
 
 <!-- BEGIN EXPERTISE | native GitHub one-page SiFa accordions -->
 <div align="center">
