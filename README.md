@@ -20,7 +20,7 @@
 <!-- END LIVE_SHOWCASE -->
 
 <div align="center">
-<img src="assets/soundtrack-header.svg" width="100%" alt="Terminal Soundtrack · 4 Tracks · VUK &amp; THE MORMONIC AI" />
+<img src="assets/soundtrack-header-v2.svg" width="100%" alt="Terminal Soundtrack · 4 Tracks · VUK &amp; THE MORMONIC AI" />
 <br>
 <a href="https://vuki73.github.io/Vuki73/soundtrack/"><img src="assets/soundtrack-noch-ein-bisschen-coden.svg" width="50%" alt="Track 01: Noch ein bisschen coden – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken"><img src="assets/soundtrack-waelzt-gedanken.svg" width="50%" alt="Track 02: WÄLZT GEDANKEN – abspielen" /></a>
 <br>
