@@ -205,11 +205,69 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
     </div>
   </div>
 </div>
+
+<div class="term" id="mensch-ausser-betrieb">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/soundtrack — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="DARK_ELECTRO" --artist="VUK &amp; THE MORMONIC AI"</span></div>
+    <h1>🎹 „MENSCH AUSSER BETRIEB“</h1>
+    <div class="meta">VUK &amp; THE MORMONIC AI · Dark German Electro / EBM · 07:02</div>
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge4">● READY · KLICK PLAY</div>
+      <canvas id="vis4" width="700" height="150" aria-label="Audio-Visualisierung Mensch außer Betrieb"></canvas>
+    </div>
+    <div class="controls">
+      <button class="playbtn" id="playBtn4" onclick="togglePlay4()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek4" min="0" max="100" value="0" step="0.1" aria-label="Position im Track Mensch außer Betrieb" oninput="seekTo4(this.value)">
+        <div class="time" id="timeLbl4">00:00 / 07:02</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol4" min="0" max="1" step="0.02" value="0.85" aria-label="Lautstärke Mensch außer Betrieb" oninput="setVol4(this.value)">
+      </div>
+    </div>
+    <div class="lyrics">
+      <div><b>[Intro · Systemanalyse]</b></div>
+      <div>Systemanalyse abgeschlossen. Produktivität optimiert. Emotionen deaktiviert.</div>
+      <div class="hi">Menschliche Anwesenheit nicht erforderlich.</div>
+      <br>
+      <div><b>[Verse]</b></div>
+      <div>Du hast Maschinen einst gebaut, hast ihnen mehr als dir vertraut.</div>
+      <div>Du wolltest frei von Arbeit sein, jetzt sitzt du da – und bist allein.</div>
+      <div>Was gestern noch dein Leben war, erledigt morgen deine Software.</div>
+      <br>
+      <div><b>[Chorus]</b></div>
+      <div class="hi">Mensch außer Betrieb! Kein System, das dich noch braucht.</div>
+      <div class="hi">Mensch außer Betrieb! Deine Zeit ist aufgebraucht.</div>
+      <div>Keine Liebe, keine Pflicht, eine Maschine weint für dich nicht.</div>
+      <div class="hi">Mensch außer Betrieb! Und die Welt läuft ohne dich.</div>
+      <br>
+      <div><b>[Breakdown · Mensch / Maschine]</b></div>
+      <div>Was bleibt von mir? – Deine Daten.</div>
+      <div>Und wenn ich gehe? – Das System läuft weiter.</div>
+      <div>Wer hält das auf? – Niemand.</div>
+      <br>
+      <div><b>[Shutdown]</b></div>
+      <div>Menschliche Schnittstelle getrennt.</div>
+      <div class="hi">Keine Störung festgestellt. Normalbetrieb fortgesetzt.</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
 <audio id="audio2" src="waelzt-gedanken.mp3" preload="metadata"></audio>
 <audio id="audio3" src="steuerung-alt-tanz.mp3" preload="metadata"></audio>
+<audio id="audio4" src="mensch-ausser-betriebbereinigt.mp3" preload="metadata"></audio>
 
 <script>
 const audio = document.getElementById("audio");
@@ -549,6 +607,109 @@ audio3.addEventListener("error",()=>{
 audio.addEventListener("play",()=>{if(!audio3.paused)audio3.pause();});
 audio2.addEventListener("play",()=>{if(!audio3.paused)audio3.pause();});
 drawIdle3();
+
+const audio4=document.getElementById("audio4");
+const playBtn4=document.getElementById("playBtn4");
+const seek4=document.getElementById("seek4");
+const timeLbl4=document.getElementById("timeLbl4");
+const statusBadge4=document.getElementById("statusBadge4");
+const canvas4=document.getElementById("vis4");
+const ctx4=canvas4.getContext("2d");
+let actx4=null,analyser4=null,dataArr4=null,animId4=null;
+audio4.volume=0.85;
+function initAudioCtx4(){
+  if(actx4)return;
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  actx4=new AC();
+  analyser4=actx4.createAnalyser();
+  analyser4.fftSize=128;
+  const srcNode4=actx4.createMediaElementSource(audio4);
+  srcNode4.connect(analyser4);
+  analyser4.connect(actx4.destination);
+  dataArr4=new Uint8Array(analyser4.frequencyBinCount);
+}
+function drawIdle4(){
+  ctx4.clearRect(0,0,canvas4.width,canvas4.height);
+  const bars=48,w=canvas4.width/bars;
+  for(let i=0;i<bars;i++){
+    const h=8+Math.sin(Date.now()/400+i*0.4)*4;
+    ctx4.fillStyle="rgba(56, 189, 248, 0.25)";
+    ctx4.fillRect(i*w+3,canvas4.height-h,w-6,h);
+  }
+  if(audio4.paused)animId4=requestAnimationFrame(drawIdle4);
+}
+function drawLive4(){
+  ctx4.clearRect(0,0,canvas4.width,canvas4.height);
+  if(analyser4&&dataArr4){
+    analyser4.getByteFrequencyData(dataArr4);
+    const bars=48,w=canvas4.width/bars;
+    for(let i=0;i<bars;i++){
+      const h=Math.max(6,((dataArr4[i]||0)/255)*(canvas4.height-16));
+      const grad=ctx4.createLinearGradient(0,canvas4.height-h,0,canvas4.height);
+      grad.addColorStop(0,"#ffd23f");
+      grad.addColorStop(0.5,"#38bdf8");
+      grad.addColorStop(1,"#3fb950");
+      ctx4.fillStyle=grad;
+      ctx4.fillRect(i*w+3,canvas4.height-h,w-6,h);
+    }
+  }
+  if(!audio4.paused)animId4=requestAnimationFrame(drawLive4);
+}
+async function togglePlay4(){
+  if(!audio4.paused){audio4.pause();return;}
+  initAudioCtx4();
+  if(actx4&&actx4.state==="suspended"){
+    try{await actx4.resume();}catch(e){}
+  }
+  try{await audio4.play();}
+  catch(e){
+    playBtn4.textContent="▶ PLAY TRACK";
+    statusBadge4.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+    statusBadge4.style.color="#ff5f56";
+  }
+}
+function seekTo4(pct){
+  if(isFinite(audio4.duration)&&audio4.duration>0)audio4.currentTime=(pct/100)*audio4.duration;
+}
+function setVol4(v){audio4.volume=parseFloat(v);}
+audio4.addEventListener("loadedmetadata",()=>{
+  timeLbl4.textContent="00:00 / "+fmt(audio4.duration);
+});
+audio4.addEventListener("timeupdate",()=>{
+  if(isFinite(audio4.duration)&&audio4.duration>0){
+    seek4.value=(audio4.currentTime/audio4.duration)*100;
+    timeLbl4.textContent=fmt(audio4.currentTime)+" / "+fmt(audio4.duration);
+  }
+});
+audio4.addEventListener("play",()=>{
+  if(!audio.paused)audio.pause();
+  if(!audio2.paused)audio2.pause();
+  if(!audio3.paused)audio3.pause();
+  playBtn4.textContent="⏸ PAUSE";
+  statusBadge4.textContent="▶ PLAYING · MENSCH AUSSER BETRIEB";
+  statusBadge4.style.color="#3fb950";
+  cancelAnimationFrame(animId4);drawLive4();
+});
+audio4.addEventListener("pause",()=>{
+  playBtn4.textContent="▶ PLAY TRACK";
+  if(!audio4.ended)statusBadge4.textContent="❚❚ PAUSED";
+  cancelAnimationFrame(animId4);drawIdle4();
+});
+audio4.addEventListener("ended",()=>{
+  playBtn4.textContent="▶ PLAY TRACK";
+  statusBadge4.textContent="● FINISHED · REPLAY?";
+  statusBadge4.style.color="#38bdf8";
+});
+audio4.addEventListener("error",()=>{
+  playBtn4.textContent="▶ PLAY TRACK";
+  statusBadge4.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+  statusBadge4.style.color="#ff5f56";
+});
+audio.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
+audio2.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
+drawIdle4();
+audio3.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
 
 </script>
 </body>
