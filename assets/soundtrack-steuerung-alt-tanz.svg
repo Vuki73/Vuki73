@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="584" height="118" viewBox="0 0 584 118" role="img" aria-label="Track 03: STEUERUNG ALT TANZ — Play">
+<rect x="1" y="1" width="582" height="116" rx="10" fill="#0a1420" stroke="#4e647e" stroke-width="1.5"/>
+<rect x="8" y="8" width="568" height="102" rx="6" fill="#0c1825" stroke="#243b50"/>
+<g font-family="Consolas,'Liberation Mono',monospace">
+<rect x="22" y="27" width="50" height="64" rx="6" fill="#142639" stroke="#375471"/>
+<text x="47" y="52" text-anchor="middle" font-size="13" fill="#8fa9c3">TRK</text><text x="47" y="77" text-anchor="middle" font-size="22" font-weight="bold" fill="#52bffa">03</text>
+<text x="89" y="51" font-size="26" font-weight="bold" fill="#e6edf3">STEUERUNG ALT TANZ</text>
+<text x="90" y="80" font-size="16" fill="#8fa9c3" letter-spacing=".4">GERMAN ELECTRO / DANCE</text>
+<circle cx="538" cy="59" r="23" fill="#172b3d" stroke="#52bffa" stroke-width="1.5"/><path d="M532 48 L548 59 L532 70 Z" fill="#52bffa"/>
+</g></svg>
