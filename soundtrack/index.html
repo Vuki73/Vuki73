@@ -330,6 +330,67 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
     </div>
   </div>
 </div>
+
+<div class="term" id="god-is-offline">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/soundtrack — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="DARK_ELECTRO_TECHNO" --artist="VUK &amp; THE MORMONIC AI"</span></div>
+    <h1>🎹 „GOD IS OFFLINE“</h1>
+    <div class="meta">VUK &amp; THE MORMONIC AI · Dark German Electro / Techno / Deep House · 06:25</div>
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge6">● READY · KLICK PLAY</div>
+      <canvas id="vis6" width="700" height="150" aria-label="Audio-Visualisierung GOD IS OFFLINE"></canvas>
+    </div>
+    <div class="controls">
+      <button class="playbtn" id="playBtn6" onclick="togglePlay6()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek6" min="0" max="100" value="0" step="0.1" aria-label="Position im Track GOD IS OFFLINE" oninput="seekTo6(this.value)">
+        <div class="time" id="timeLbl6">00:00 / 06:25</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol6" min="0" max="1" step="0.02" value="0.85" aria-label="Lautstärke GOD IS OFFLINE" oninput="setVol6(this.value)">
+      </div>
+    </div>
+    <div class="lyrics">
+      <div><b>[Verse 1]</b></div>
+      <div>Holy words and dirty hands, silent graves in promised lands.</div>
+      <div>Sacred truth and twisted lies, manufactured paradise.</div>
+      <div>Faith for sale, salvation sold, human souls exchanged for gold.</div>
+      <div>Mercy preached and mercy denied, holy masks with hell inside.</div>
+      <br>
+      <div><b>[Hook]</b></div>
+      <div class="hi">NO SIGNAL! NO REPLY! EMPTY HEAVEN! SILENT SKY!</div>
+      <div class="hi">GOD IS OFFLINE!</div>
+      <br>
+      <div><b>[Chorus]</b></div>
+      <div>GOD IS OFFLINE! No reply from the divine.</div>
+      <div>GOD IS OFFLINE! We crossed the sacred line.</div>
+      <div>We built our hell and called it home, now we face the dark alone.</div>
+      <div>We search the sky for one last sign.</div>
+      <div class="hi">GOD IS OFFLINE!</div>
+      <br>
+      <div><b>[Verse 2]</b></div>
+      <div>We gave the devil holy names, then blamed the heavens for the flames.</div>
+      <div>We built a world without a soul, then prayed to God to take control.</div>
+      <br>
+      <div><b>[Final verse]</b></div>
+      <div>No hand of God designed this hell,</div>
+      <div>no fallen angel cast this spell.</div>
+      <div>We crossed the line, we chose the crime.</div>
+      <div class="hi">God never left.</div>
+      <div class="hi">WE – ARE – OFFLINE!</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
@@ -337,6 +398,7 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
 <audio id="audio3" src="steuerung-alt-tanz.mp3" preload="metadata"></audio>
 <audio id="audio4" src="mensch-ausser-betriebbereinigt.mp3" preload="metadata"></audio>
 <audio id="audio5" src="null-empathie.mp3" preload="metadata"></audio>
+<audio id="audio6" src="god-is-offline.mp3" preload="metadata"></audio>
 
 <script>
 const audio = document.getElementById("audio");
@@ -885,6 +947,115 @@ drawIdle5();
 audio3.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
 
 audio4.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
+
+const audio6=document.getElementById("audio6");
+const playBtn6=document.getElementById("playBtn6");
+const seek6=document.getElementById("seek6");
+const timeLbl6=document.getElementById("timeLbl6");
+const statusBadge6=document.getElementById("statusBadge6");
+const canvas6=document.getElementById("vis6");
+const ctx6=canvas6.getContext("2d");
+let actx6=null,analyser6=null,dataArr6=null,animId6=null;
+audio6.volume=0.85;
+function initAudioCtx6(){
+  if(actx6)return;
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  actx6=new AC();
+  analyser6=actx6.createAnalyser();
+  analyser6.fftSize=128;
+  const srcNode6=actx6.createMediaElementSource(audio6);
+  srcNode6.connect(analyser6);
+  analyser6.connect(actx6.destination);
+  dataArr6=new Uint8Array(analyser6.frequencyBinCount);
+}
+function drawIdle6(){
+  ctx6.clearRect(0,0,canvas6.width,canvas6.height);
+  const bars=48,w=canvas6.width/bars;
+  for(let i=0;i<bars;i++){
+    const h=8+Math.sin(Date.now()/400+i*0.4)*4;
+    ctx6.fillStyle="rgba(56, 189, 248, 0.25)";
+    ctx6.fillRect(i*w+3,canvas6.height-h,w-6,h);
+  }
+  if(audio6.paused)animId6=requestAnimationFrame(drawIdle6);
+}
+function drawLive6(){
+  ctx6.clearRect(0,0,canvas6.width,canvas6.height);
+  if(analyser6&&dataArr6){
+    analyser6.getByteFrequencyData(dataArr6);
+    const bars=48,w=canvas6.width/bars;
+    for(let i=0;i<bars;i++){
+      const h=Math.max(6,((dataArr6[i]||0)/255)*(canvas6.height-16));
+      const grad=ctx6.createLinearGradient(0,canvas6.height-h,0,canvas6.height);
+      grad.addColorStop(0,"#ffd23f");
+      grad.addColorStop(0.5,"#38bdf8");
+      grad.addColorStop(1,"#3fb950");
+      ctx6.fillStyle=grad;
+      ctx6.fillRect(i*w+3,canvas6.height-h,w-6,h);
+    }
+  }
+  if(!audio6.paused)animId6=requestAnimationFrame(drawLive6);
+}
+async function togglePlay6(){
+  if(!audio6.paused){audio6.pause();return;}
+  initAudioCtx6();
+  if(actx6&&actx6.state==="suspended"){
+    try{await actx6.resume();}catch(e){}
+  }
+  try{await audio6.play();}
+  catch(e){
+    playBtn6.textContent="▶ PLAY TRACK";
+    statusBadge6.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+    statusBadge6.style.color="#ff5f56";
+  }
+}
+function seekTo6(pct){
+  if(isFinite(audio6.duration)&&audio6.duration>0)audio6.currentTime=(pct/100)*audio6.duration;
+}
+function setVol6(v){audio6.volume=parseFloat(v);}
+audio6.addEventListener("loadedmetadata",()=>{
+  timeLbl6.textContent="00:00 / "+fmt(audio6.duration);
+});
+audio6.addEventListener("timeupdate",()=>{
+  if(isFinite(audio6.duration)&&audio6.duration>0){
+    seek6.value=(audio6.currentTime/audio6.duration)*100;
+    timeLbl6.textContent=fmt(audio6.currentTime)+" / "+fmt(audio6.duration);
+  }
+});
+audio6.addEventListener("play",()=>{
+  if(!audio.paused)audio.pause();
+  if(!audio2.paused)audio2.pause();
+  if(!audio3.paused)audio3.pause();
+  if(!audio4.paused)audio4.pause();
+  if(!audio5.paused)audio5.pause();
+  playBtn6.textContent="⏸ PAUSE";
+  statusBadge6.textContent="▶ PLAYING · GOD IS OFFLINE";
+  statusBadge6.style.color="#3fb950";
+  cancelAnimationFrame(animId6);drawLive6();
+});
+audio6.addEventListener("pause",()=>{
+  playBtn6.textContent="▶ PLAY TRACK";
+  if(!audio6.ended)statusBadge6.textContent="❚❚ PAUSED";
+  cancelAnimationFrame(animId6);drawIdle6();
+});
+audio6.addEventListener("ended",()=>{
+  playBtn6.textContent="▶ PLAY TRACK";
+  statusBadge6.textContent="● FINISHED · REPLAY?";
+  statusBadge6.style.color="#38bdf8";
+});
+audio6.addEventListener("error",()=>{
+  playBtn6.textContent="▶ PLAY TRACK";
+  statusBadge6.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+  statusBadge6.style.color="#ff5f56";
+});
+audio.addEventListener("play",()=>{if(!audio6.paused)audio6.pause();});
+audio2.addEventListener("play",()=>{if(!audio6.paused)audio6.pause();});
+drawIdle6();
+audio3.addEventListener("play",()=>{if(!audio6.paused)audio6.pause();});
+
+audio4.addEventListener("play",()=>{if(!audio6.paused)audio6.pause();});
+
+audio5.addEventListener("play",()=>{if(!audio6.paused)audio6.pause();});
 
 </script>
 </body>
