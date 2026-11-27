@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1154" height="48" viewBox="0 0 1154 48" role="img" aria-label="Soundtrack Archive — 04 Tracks">
+<rect x="1" y="1" width="1152" height="46" rx="8" fill="#0a1420" stroke="#4e647e" stroke-width="1.5"/>
+<rect x="5" y="5" width="1144" height="38" rx="5" fill="#0c1825" stroke="#243b50"/>
+<g fill="none" stroke="#52bffa" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M25 31V13L43 9V27M25 18L43 14"/><ellipse cx="20" cy="32" rx="5" ry="3.5" fill="#52bffa"/><ellipse cx="38" cy="28" rx="5" ry="3.5" fill="#52bffa"/></g>
+<g font-family="Consolas,'Liberation Mono',monospace">
+<text x="60" y="32" font-size="25" font-weight="bold" letter-spacing="1" fill="#52bffa">SOUNDTRACK ARCHIVE</text>
+<text x="1130" y="30" text-anchor="end" font-size="17" fill="#ffd05a">04 TRACKS</text>
+</g></svg>
