@@ -26,7 +26,7 @@
 </div>
 
 <details>
-<summary><img src="assets/soundtrack-archive-v2.svg" width="430" height="28" alt="SOUNDTRACK ARCHIVE · 04 TRACKS – aufklappen" /></summary>
+<summary><h2>🎵 SOUNDTRACK ARCHIVE · 04 TRACKS</h2></summary>
 
 <div align="center">
 <a href="https://vuki73.github.io/Vuki73/soundtrack/"><img src="assets/soundtrack-noch-ein-bisschen-coden.svg" width="50%" alt="Track 01: Noch ein bisschen coden – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken"><img src="assets/soundtrack-waelzt-gedanken.svg" width="50%" alt="Track 02: WÄLZT GEDANKEN – abspielen" /></a>
