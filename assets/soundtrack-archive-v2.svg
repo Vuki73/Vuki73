@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="430" height="28" viewBox="0 0 430 28" role="img" aria-label="Soundtrack Archive — 04 Tracks">
+<style>.label{fill:#0969a8}.count{fill:#825700}@media(prefers-color-scheme:dark){.label{fill:#52bffa}.count{fill:#ffd05a}}</style>
+<g stroke="#259bd5" fill="#259bd5" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19V5L22 2V16M9 9L22 6" fill="none"/><ellipse cx="5.5" cy="20" rx="3.7" ry="2.7"/><ellipse cx="18.5" cy="17" rx="3.7" ry="2.7"/></g>
+<g font-family="Consolas,'Liberation Mono',monospace" font-weight="bold"><text class="label" x="33" y="21" font-size="21">SOUNDTRACK ARCHIVE</text><text class="count" x="287" y="21" font-size="16">· 04 TRACKS</text></g></svg>
