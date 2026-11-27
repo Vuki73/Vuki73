@@ -22,12 +22,19 @@
 <div align="center">
 <img src="assets/soundtrack-header-v4.svg" width="100%" alt="Terminal Soundtrack · 6 Tracks · VUK &amp; THE MORMONIC AI" />
 <br>
+<a href="https://vuki73.github.io/Vuki73/soundtrack/#god-is-offline"><img src="assets/soundtrack-god-is-offline-left.svg" width="50%" alt="Track 06: GOD IS OFFLINE – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#mensch-ausser-betrieb"><img src="assets/soundtrack-mensch-ausser-betrieb-v2.svg" width="50%" alt="Track 04: MENSCH AUSSER BETRIEB – abspielen" /></a>
+</div>
+
+<details>
+<summary><strong>♫ SOUNDTRACK ARCHIVE · 04 TRACKS</strong></summary>
+
+<div align="center">
 <a href="https://vuki73.github.io/Vuki73/soundtrack/"><img src="assets/soundtrack-noch-ein-bisschen-coden.svg" width="50%" alt="Track 01: Noch ein bisschen coden – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#waelzt-gedanken"><img src="assets/soundtrack-waelzt-gedanken.svg" width="50%" alt="Track 02: WÄLZT GEDANKEN – abspielen" /></a>
 <br>
-<a href="https://vuki73.github.io/Vuki73/soundtrack/#steuerung-alt-tanz"><img src="assets/soundtrack-steuerung-alt-tanz.svg" width="50%" alt="Track 03: STEUERUNG ALT TANZ – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#mensch-ausser-betrieb"><img src="assets/soundtrack-mensch-ausser-betrieb-v2.svg" width="50%" alt="Track 04: MENSCH AUSSER BETRIEB – abspielen" /></a>
-<br>
-<a href="https://vuki73.github.io/Vuki73/soundtrack/#null-empathie"><img src="assets/soundtrack-null-empathie-v2.svg" width="50%" alt="Track 05: NULL EMPATHIE – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#god-is-offline"><img src="assets/soundtrack-god-is-offline.svg" width="50%" alt="Track 06: GOD IS OFFLINE – abspielen" /></a>
+<a href="https://vuki73.github.io/Vuki73/soundtrack/#steuerung-alt-tanz"><img src="assets/soundtrack-steuerung-alt-tanz.svg" width="50%" alt="Track 03: STEUERUNG ALT TANZ – abspielen" /></a><a href="https://vuki73.github.io/Vuki73/soundtrack/#null-empathie"><img src="assets/soundtrack-null-empathie-right.svg" width="50%" alt="Track 05: NULL EMPATHIE – abspielen" /></a>
 </div>
+
+</details>
 <!-- END PODCAST -->
 
 <!-- BEGIN EXPERTISE | native GitHub one-page SiFa accordions -->
