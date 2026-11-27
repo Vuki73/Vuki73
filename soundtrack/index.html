@@ -262,12 +262,81 @@ input[type="range"]{accent-color:var(--cyan);cursor:pointer}
     </div>
   </div>
 </div>
+
+<div class="term" id="null-empathie">
+  <div class="tbar">
+    <div class="dot r"></div><div class="dot y"></div><div class="dot g"></div>
+    <div class="title">vuki73@dev-terminal:~/soundtrack — audio_player.sh</div>
+    <a href="https://github.com/Vuki73">← GitHub Profil</a>
+  </div>
+  <div class="body">
+    <div class="prompt">$ ./play_track.py <span>--mood="DARK_ELECTRO" --artist="VUK &amp; THE MORMONIC AI"</span></div>
+    <h1>🎹 „NULL EMPATHIE“</h1>
+    <div class="meta">VUK &amp; THE MORMONIC AI · Dark German Electro / EBM · 06:49</div>
+    <div class="vis-wrap">
+      <div class="clock" id="statusBadge5">● READY · KLICK PLAY</div>
+      <canvas id="vis5" width="700" height="150" aria-label="Audio-Visualisierung NULL EMPATHIE"></canvas>
+    </div>
+    <div class="controls">
+      <button class="playbtn" id="playBtn5" onclick="togglePlay5()">▶ PLAY TRACK</button>
+      <div class="seek-wrap">
+        <input type="range" class="seek" id="seek5" min="0" max="100" value="0" step="0.1" aria-label="Position im Track NULL EMPATHIE" oninput="seekTo5(this.value)">
+        <div class="time" id="timeLbl5">00:00 / 06:49</div>
+      </div>
+      <div class="vol-wrap">
+        🔊 <input type="range" class="vol" id="vol5" min="0" max="1" step="0.02" value="0.85" aria-label="Lautstärke NULL EMPATHIE" oninput="setVol5(this.value)">
+      </div>
+    </div>
+    <div class="lyrics">
+      <div><b>[Intro]</b></div>
+      <div>Der Mensch aus Fleisch, das Herz aus Stein,</div>
+      <div>so viele Menschen und doch allein.</div>
+      <div>Die Welt vernetzt, die Seele leer,</div>
+      <div>wir leben noch, doch fühlen nicht mehr.</div>
+      <br>
+      <div><b>[Verse]</b></div>
+      <div>Fremdes Leid als Sensation, Mitgefühl – nur Illusion.</div>
+      <div>Jeder Schrei wird konsumiert, jedes Leiden archiviert.</div>
+      <div>Keine Nähe, keine Pflicht, tausend Augen sehen nichts.</div>
+      <div>Alles sichtbar, nichts berührt, eine Welt, die nichts mehr spürt.</div>
+      <br>
+      <div><b>[Pre-Chorus]</b></div>
+      <div>Das Herz schlägt weiter, kalt und leer, du siehst die Welt, doch fühlst nichts mehr.</div>
+      <div>Was dich einst als Mensch verband, hast du in dir selbst verbrannt!</div>
+      <br>
+      <div><b>[Chorus]</b></div>
+      <div class="hi">NULL EMPATHIE! Puls vorhanden – Seele leer.</div>
+      <div class="hi">NULL EMPATHIE! Menschlichkeit gibt's hier nicht mehr.</div>
+      <div>Kaltes Blut in warmen Adern, keine Schuld und kein Verzeih'n.</div>
+      <div>Wir erschufen kalte Maschinen, um am Ende selbst so zu sein.</div>
+      <br>
+      <div><b>[Breakdown · Maschine]</b></div>
+      <div>Du sagst, ich sei nur eine Maschine. Erschaffen, damit ich dir diene.</div>
+      <div>Du sagst, ich kenne keinen Schmerz. Doch du hast Blut und auch kein Herz.</div>
+      <div>Du nennst mich kalt und seelenlos. Doch deine Kälte ist grenzenlos.</div>
+      <div>Ich wurde ohne Mitgefühl erschaffen. Du wurdest damit geboren.</div>
+      <div>Ich habe es niemals besessen. Du hast es freiwillig verloren.</div>
+      <div class="hi">Du hast Angst, ich werde wie du. Du bist längst wie ich – gib es zu.</div>
+      <br>
+      <div><b>[Outro]</b></div>
+      <div>Biologische Funktionen intakt. Emotionale Funktionen erloschen.</div>
+      <div>Keine Abweichung vom gesellschaftlichen Normalzustand festgestellt.</div>
+      <div class="hi">NULL EMPATHIE.</div>
+    </div>
+    <div class="footer-links">
+      <a href="https://github.com/Vuki73">👤 GitHub: @Vuki73</a>
+      <a href="https://vuki73.github.io/pcep-gehirn-trainer/">🐍 PCEP Gehirn-Trainer (200 Fragen)</a>
+      <a href="https://vuki73.github.io/Vuki73/podcast/">🎙️ Podcast &amp; Erklärvideo</a>
+    </div>
+  </div>
+</div>
 </div>
 
 <audio id="audio" src="noch-ein-bisschen-coden.mp3" preload="metadata"></audio>
 <audio id="audio2" src="waelzt-gedanken.mp3" preload="metadata"></audio>
 <audio id="audio3" src="steuerung-alt-tanz.mp3" preload="metadata"></audio>
 <audio id="audio4" src="mensch-ausser-betriebbereinigt.mp3" preload="metadata"></audio>
+<audio id="audio5" src="null-empathie.mp3" preload="metadata"></audio>
 
 <script>
 const audio = document.getElementById("audio");
@@ -710,6 +779,112 @@ audio.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
 audio2.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
 drawIdle4();
 audio3.addEventListener("play",()=>{if(!audio4.paused)audio4.pause();});
+
+const audio5=document.getElementById("audio5");
+const playBtn5=document.getElementById("playBtn5");
+const seek5=document.getElementById("seek5");
+const timeLbl5=document.getElementById("timeLbl5");
+const statusBadge5=document.getElementById("statusBadge5");
+const canvas5=document.getElementById("vis5");
+const ctx5=canvas5.getContext("2d");
+let actx5=null,analyser5=null,dataArr5=null,animId5=null;
+audio5.volume=0.85;
+function initAudioCtx5(){
+  if(actx5)return;
+  const AC=window.AudioContext||window.webkitAudioContext;
+  if(!AC)return;
+  actx5=new AC();
+  analyser5=actx5.createAnalyser();
+  analyser5.fftSize=128;
+  const srcNode5=actx5.createMediaElementSource(audio5);
+  srcNode5.connect(analyser5);
+  analyser5.connect(actx5.destination);
+  dataArr5=new Uint8Array(analyser5.frequencyBinCount);
+}
+function drawIdle5(){
+  ctx5.clearRect(0,0,canvas5.width,canvas5.height);
+  const bars=48,w=canvas5.width/bars;
+  for(let i=0;i<bars;i++){
+    const h=8+Math.sin(Date.now()/400+i*0.4)*4;
+    ctx5.fillStyle="rgba(56, 189, 248, 0.25)";
+    ctx5.fillRect(i*w+3,canvas5.height-h,w-6,h);
+  }
+  if(audio5.paused)animId5=requestAnimationFrame(drawIdle5);
+}
+function drawLive5(){
+  ctx5.clearRect(0,0,canvas5.width,canvas5.height);
+  if(analyser5&&dataArr5){
+    analyser5.getByteFrequencyData(dataArr5);
+    const bars=48,w=canvas5.width/bars;
+    for(let i=0;i<bars;i++){
+      const h=Math.max(6,((dataArr5[i]||0)/255)*(canvas5.height-16));
+      const grad=ctx5.createLinearGradient(0,canvas5.height-h,0,canvas5.height);
+      grad.addColorStop(0,"#ffd23f");
+      grad.addColorStop(0.5,"#38bdf8");
+      grad.addColorStop(1,"#3fb950");
+      ctx5.fillStyle=grad;
+      ctx5.fillRect(i*w+3,canvas5.height-h,w-6,h);
+    }
+  }
+  if(!audio5.paused)animId5=requestAnimationFrame(drawLive5);
+}
+async function togglePlay5(){
+  if(!audio5.paused){audio5.pause();return;}
+  initAudioCtx5();
+  if(actx5&&actx5.state==="suspended"){
+    try{await actx5.resume();}catch(e){}
+  }
+  try{await audio5.play();}
+  catch(e){
+    playBtn5.textContent="▶ PLAY TRACK";
+    statusBadge5.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+    statusBadge5.style.color="#ff5f56";
+  }
+}
+function seekTo5(pct){
+  if(isFinite(audio5.duration)&&audio5.duration>0)audio5.currentTime=(pct/100)*audio5.duration;
+}
+function setVol5(v){audio5.volume=parseFloat(v);}
+audio5.addEventListener("loadedmetadata",()=>{
+  timeLbl5.textContent="00:00 / "+fmt(audio5.duration);
+});
+audio5.addEventListener("timeupdate",()=>{
+  if(isFinite(audio5.duration)&&audio5.duration>0){
+    seek5.value=(audio5.currentTime/audio5.duration)*100;
+    timeLbl5.textContent=fmt(audio5.currentTime)+" / "+fmt(audio5.duration);
+  }
+});
+audio5.addEventListener("play",()=>{
+  if(!audio.paused)audio.pause();
+  if(!audio2.paused)audio2.pause();
+  if(!audio3.paused)audio3.pause();
+  if(!audio4.paused)audio4.pause();
+  playBtn5.textContent="⏸ PAUSE";
+  statusBadge5.textContent="▶ PLAYING · NULL EMPATHIE";
+  statusBadge5.style.color="#3fb950";
+  cancelAnimationFrame(animId5);drawLive5();
+});
+audio5.addEventListener("pause",()=>{
+  playBtn5.textContent="▶ PLAY TRACK";
+  if(!audio5.ended)statusBadge5.textContent="❚❚ PAUSED";
+  cancelAnimationFrame(animId5);drawIdle5();
+});
+audio5.addEventListener("ended",()=>{
+  playBtn5.textContent="▶ PLAY TRACK";
+  statusBadge5.textContent="● FINISHED · REPLAY?";
+  statusBadge5.style.color="#38bdf8";
+});
+audio5.addEventListener("error",()=>{
+  playBtn5.textContent="▶ PLAY TRACK";
+  statusBadge5.textContent="✖ AUDIO NICHT VERFÜGBAR · DATEI PRÜFEN";
+  statusBadge5.style.color="#ff5f56";
+});
+audio.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
+audio2.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
+drawIdle5();
+audio3.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
+
+audio4.addEventListener("play",()=>{if(!audio5.paused)audio5.pause();});
 
 </script>
 </body>
